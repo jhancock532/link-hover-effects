@@ -6,3 +6,81 @@ layout: page
 <h1 class="homepage__title"><a href="#" class="link--title">{{ site.title }}</a></h1>
 
 <p class="homepage__description">{{ site.description }}</p>
+
+
+<h1 class="card__title">Highlight Fill</h1>
+<div class="card">
+
+  <div class="card__link-container" id="highlight-fill">
+    <a class="card__link link--fill-from-right" href="#">Fill from right</a>
+    <a class="card__link link--fill-from-left" href="#">Fill from left</a>
+    <a class="card__link link--fill-from-top" href="#">Fill from top</a>
+    <a class="card__link link--fill-from-bottom" href="#">Fill from bottom</a>
+  </div>
+
+  <div class="card__code-container">
+    {% highlight scss %}
+.link {
+  &--title {
+    padding: 2px 0 1px 0;
+    text-decoration: none;
+    background-image: linear-gradient( transparent 0%, transparent calc(50% - 6px), rgba(254,227,26, 0.9) calc(50% - 6px), rgba(254,227,26, 0.9) 100% );
+    transition: background-position 120ms ease-in-out, padding 120ms ease-in-out;
+    background-size: 100% 200%;
+    background-position: 0 0%;
+
+    &:visited {
+      color: $color--black;
+    }
+    
+    &:hover {
+      background-image: linear-gradient( transparent 0%, transparent calc(50% - 9px), rgba(254,227,26,1) calc(50% - 9px), rgba(254,227,26,1) 100% );
+      background-position: 0 100%;
+    }
+  }
+}
+    {% endhighlight %}
+  </div>
+</div>
+
+<h1 class="card__title">Border Fill</h1>
+<div class="card">
+
+  <div class="card__link-container" id="highlight-fill">
+    <a class="card__link link--fill-from-right" href="#">Fill from right</a>
+  </div>
+
+  <div class="card__code-container">
+    {% highlight scss %}
+.link {
+  &--title {
+
+    &:visited {
+      color: $color--black;
+    }
+    
+    &:hover {
+      background-image: linear-gradient( transparent 0%, transparent calc(50% - 9px), rgba(254,227,26,1) calc(50% - 9px), rgba(254,227,26,1) 100% );
+      background-position: 0 100%;
+    }
+        &:visited {
+      color: $color--black;
+    }
+    
+    &:hover {
+      background-image: linear-gradient( transparent 0%, transparent calc(50% - 9px), rgba(254,227,26,1) calc(50% - 9px), rgba(254,227,26,1) 100% );
+      background-position: 0 100%;
+    }
+        &:visited {
+      color: $color--black;
+    }
+    
+    &:hover {
+      background-image: linear-gradient( transparent 0%, transparent calc(50% - 9px), rgba(254,227,26,1) calc(50% - 9px), rgba(254,227,26,1) 100% );
+      background-position: 0 100%;
+    }
+  }
+}
+    {% endhighlight %}
+  </div>
+</div>

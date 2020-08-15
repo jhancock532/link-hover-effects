@@ -11,3 +11,11 @@ p, li, h1, h2, h3, h4, h5 {
   color: $color--black;
   background: $color--yellow;
 }
+
+a {
+  color: $color--blue;
+
+  &:visited {
+    color: $color--blue;
+  }
+}

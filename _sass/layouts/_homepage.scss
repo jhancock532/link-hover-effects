@@ -1,11 +1,11 @@
 .homepage {
   &__title {
-    display: inline-block;
     margin: $grid * 2 auto 0 auto;
+    font-size: 3rem;
+    text-align: center;
 
     @include media-query(sm){
       margin-top: $grid * 3;
-      font-size: 3rem;
     }
 
     @include media-query(md){
