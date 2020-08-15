@@ -1,0 +1,28 @@
+.homepage {
+  &__title {
+    display: inline-block;
+    margin: $grid * 2 auto 0 auto;
+
+    @include media-query(sm){
+      margin-top: $grid * 3;
+      font-size: 3rem;
+    }
+
+    @include media-query(md){
+      margin-top: $grid * 4;
+      font-size: 3.5rem;
+    }
+  }
+
+  &__description {
+    margin-top: $grid * 3;
+
+    @include media-query(sm){
+      margin-top: $grid * 2;
+    }
+
+    @include media-query(md){
+      margin-top: $grid * 3;
+    }
+  }
+}

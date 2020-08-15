@@ -1,0 +1,19 @@
+.link {
+  &--title {
+    padding: 2px 0 1px 0;
+    text-decoration: none;
+    background-image: linear-gradient( transparent 0%, transparent calc(50% - 6px), rgba(254,227,26, 0.9) calc(50% - 6px), rgba(254,227,26, 0.9) 100% );
+    transition: background-position 120ms ease-in-out, padding 120ms ease-in-out;
+    background-size: 100% 200%;
+    background-position: 0 0%;
+
+    &:visited {
+      color: $color--black;
+    }
+    
+    &:hover {
+      background-image: linear-gradient( transparent 0%, transparent calc(50% - 9px), rgba(254,227,26,1) calc(50% - 9px), rgba(254,227,26,1) 100% );
+      background-position: 0 100%;
+    }
+  }
+}

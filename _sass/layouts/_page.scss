@@ -1,0 +1,21 @@
+.page {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 0 auto 0;
+    padding: $grid;
+
+    @include media-query(sm) {
+      grid-template-columns: auto 600px auto;
+    }
+
+    @include media-query(md) {
+      grid-template-columns: auto 800px auto;
+    }
+  }
+
+  &__content {
+    > p {
+      @include font-size(m);
+    }
+  }
+}

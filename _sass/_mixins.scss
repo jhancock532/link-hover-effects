@@ -1,0 +1,51 @@
+
+/** Mobile First Min-Width Media Query Mixin
+ * Accepts the values xs, sm, md, lg (see variables.scss)
+ * Use this mixin to overwrite mobile first CSS
+ * Example - ` @include media-query(sm) { ... } `
+ * Source - https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
+ */
+
+ @mixin media-query($breakpoint) {
+
+  @if map-has-key($media-query-breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($media-query-breakpoints, $breakpoint);
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+/** Responsive Font Size Mixin
+ * Accepts the values xxs, xs, s, m, l, xl, xxl, xxxl (see variables.scss)
+ * Example - ` @include font-size(m); ` - Includes a medium size font
+ * Source - Inspired by https://iamsteve.me/blog/entry/atomic-font-size-management-with-sass, code mostly remixed from breakpoint mixin.
+ */
+
+@mixin font-size($font-size) {
+
+  @if map-has-key($mobile-font-sizes, $font-size) {
+    font-size: map-get($mobile-font-sizes, $font-size);
+  } @else {
+    @warn 'Stated font size not included in mobile-font-sizes: #{$font-size}.';
+  }
+
+  @include media-query(md){
+    @if map-has-key($tablet-font-sizes, $font-size) {
+      font-size: map-get($tablet-font-sizes, $font-size);
+    } @else {
+      @warn 'Stated font size not included in tablet-font-sizes: #{$font-size}.';
+    }
+  }
+
+  @include media-query(lg){
+    @if map-has-key($desktop-font-sizes, $font-size) {
+      font-size: map-get($desktop-font-sizes, $font-size);
+    } @else {
+      @warn 'Stated font size not included in desktop-font-sizes: #{$font-size}.';
+    }
+  }
+}

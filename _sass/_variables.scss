@@ -1,0 +1,77 @@
+/* Layout */
+
+$grid: 20px;
+
+$media-query-breakpoints: (
+  sm: 600px, //Mobile Landscape
+  md: 900px, //Tablet Landscape
+  lg: 1200px //Desktop
+);
+
+/* Colour Scheme */
+// Copied from https://theyardtheatre.co.uk
+$color--pink: rgb(255,118,154);
+$color--orange: rgb(254,161,21);
+$color--red: rgb(255,44,37);
+$color--green: rgb(63,165,53);
+$color--blue: rgb(0,159,227);
+$color--yellow: rgb(254,227,26);
+$color--white: rgb(255, 255, 255);
+$color--grey: rgb(150,160,161);
+$color--black: rgb(0, 0, 0);
+ 
+$color--primary: $color--yellow;
+$color--secondary: $color--red;
+
+/* Typography */
+
+//Nanum Gothic
+@font-face {
+  font-family: "Nanum Gothic";
+  src: url("/assets/fonts/Nanum_Gothic/NanumGothic-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Nanum Gothic";
+  src: url("/assets/fonts/Nanum_Gothic/NanumGothic-ExtraBold.ttf");
+  font-weight: 700;
+}
+
+//Alegreya
+@font-face {
+  font-family: "Alegreya";
+  src: url("/assets/fonts/Alegreya/Alegreya-Regular.ttf");
+  font-weight: 700;
+}
+
+$font-primary: Nanum Gothic, Helvetica, Sans-serif;
+$font-secondary: Alegreya, serif;
+
+$font-weights: ("regular": 400, "bold": 700);
+ 
+$mobile-font-sizes: (
+  s: 16px,
+  m: 18px,
+  l: 20px,
+  xl: 22px,
+  xxl: 28px,
+  xxxl: 32px
+);
+
+$tablet-font-sizes: (
+  s: 16px,
+  m: 20px,
+  l: 22px,
+  xl: 24px,
+  xxl: 28px,
+  xxxl: 48px
+);
+
+$desktop-font-sizes: (
+  s: 18px,
+  m: 20px,
+  l: 22px,
+  xl: 24px,
+  xxl: 32px,
+  xxxl: 48px
+);
