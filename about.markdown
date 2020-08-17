@@ -20,3 +20,5 @@ A button to see how the link looks in a longer paragraph or what happens when it
 Link to the about page.
 
 Tag filter feature.
+
+Link beside title of effect?

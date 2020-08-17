@@ -1,11 +1,11 @@
 .homepage {
   &__title {
-    margin: $grid * 2 auto 0 auto;
+    margin: $grid auto 0 auto;
     font-size: 3rem;
-    text-align: center;
 
     @include media-query(sm){
       margin-top: $grid * 3;
+      text-align: center;
     }
 
     @include media-query(md){
@@ -15,11 +15,7 @@
   }
 
   &__description {
-    margin-top: $grid * 3;
-
-    @include media-query(sm){
-      margin-top: $grid * 2;
-    }
+    margin-top: $grid * 2;
 
     @include media-query(md){
       margin-top: $grid * 3;

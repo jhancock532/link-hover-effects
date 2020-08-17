@@ -1,5 +1,5 @@
 ---
-title: Link Styling
+title: Link Styles
 layout: page
 ---
 
@@ -8,41 +8,56 @@ layout: page
 <p class="homepage__description">{{ site.description }}</p>
 
 
-<h1 class="card__title">Highlight Fill</h1>
-<div class="card">
 
-  <div class="card__link-container" id="highlight-fill">
-    <a class="card__link link--fill-from-right" href="#">Fill from right</a>
-    <a class="card__link link--fill-from-left" href="#">Fill from left</a>
-    <a class="card__link link--fill-from-top" href="#">Fill from top</a>
-    <a class="card__link link--fill-from-bottom" href="#">Fill from bottom</a>
+
+<div class="card">
+  <div class="card__topper">
+    <h1 class="card__title">Highlight Fill (Mix-Blend-Mode)</h1>
+    <p class="card__link-to-code"><a href="#">View Source Code</a></p>
   </div>
 
+  <div class="card__link-display-container">
+    <div class="card__link-container">
+      <a class="card__link link--highlight-from-right" href="#">Fill from right</a>
+      <a class="card__link link--highlight-from-left" href="#">Fill from left</a>
+      <a class="card__link link--highlight-from-top" href="#">Fill from top</a>
+      <a class="card__link link--highlight-from-bottom" href="#">Fill from bottom</a>
+    </div>
+    <div class="card__paragraph-container">
+      <p>Here's a paragraph to test out the link effect over multiple lines of text. <a href="#" class="link--highlight-from-left">Here is an extended length version of the link which displays awkwardly.</a> The effect doesn't display well for longer links in small width containers, please use it carefully.</p>
+    </div>
+  </div>
+
+  <!--
   <div class="card__code-container">
     {% highlight scss %}
-.link {
-  &--title {
-    padding: 2px 0 1px 0;
-    text-decoration: none;
-    background-image: linear-gradient( transparent 0%, transparent calc(50% - 6px), rgba(254,227,26, 0.9) calc(50% - 6px), rgba(254,227,26, 0.9) 100% );
-    transition: background-position 120ms ease-in-out, padding 120ms ease-in-out;
-    background-size: 100% 200%;
-    background-position: 0 0%;
-
-    &:visited {
-      color: $color--black;
-    }
-    
-    &:hover {
-      background-image: linear-gradient( transparent 0%, transparent calc(50% - 9px), rgba(254,227,26,1) calc(50% - 9px), rgba(254,227,26,1) 100% );
-      background-position: 0 100%;
-    }
+.link--highlight-from-left {
+  position: relative;
+  display: inline-block; //Don't let the link line-break!
+  //This causes the :after elements position to glitch.
+  
+  &:after {
+    content: "";
+    position: absolute;
+    left: -1.5%;
+    top: -10%;
+    width: 0;
+    height: 120%;
+    background-color: yellow;
+    transition: width 0.3s ease-in-out;
+    mix-blend-mode: multiply;
+  }
+  
+  &:hover::after, &:focus::after {
+    width: 103%;
   }
 }
     {% endhighlight %}
   </div>
+  -->
 </div>
 
+<!--
 <h1 class="card__title">Border Fill</h1>
 <div class="card">
 
@@ -84,3 +99,4 @@ layout: page
     {% endhighlight %}
   </div>
 </div>
+-->

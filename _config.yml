@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Link Styling
+title: Link Styles
 #email: 
 description: >- # this means to ignore newlines until "baseurl:"
   A collection of CSS styles for hyperlink elements. Hover over the links with your mouse for different animation effects.
@@ -31,6 +31,7 @@ github_username: jhancock532
 #theme: 
 plugins:
   - jekyll-feed
+  - jekyll-autoprefixer
 
 # Exclude from processing.
 # The following items will not be processed, by default.

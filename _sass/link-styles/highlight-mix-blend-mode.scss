@@ -1,0 +1,88 @@
+.link {
+  &--highlight-from-left {
+    position: relative;
+    display: inline-block; //Don't break the link over multiple lines, the :after element will glitch.
+    
+    &:after {
+      content: "";
+      position: absolute;
+      left: -1.5%;
+      top: -10%;
+      width: 0;
+      height: 120%;
+      background-color: $color--primary;
+      transition: width 0.3s ease-in-out;
+      mix-blend-mode: multiply;
+    }
+    
+    &:hover::after, &:focus::after {
+      width: 103%;
+    }
+  }
+
+  &--highlight-from-right {
+    position: relative;
+    display: inline-block; //Don't let the link line-break!
+    //This causes the :after elements position to glitch.
+    
+    &:after {
+      content: "";
+      position: absolute;
+      right: -1.5%;
+      top: -10%;
+      width: 0;
+      height: 120%;
+      background-color: $color--primary;
+      transition: width 0.3s ease-in-out;
+      mix-blend-mode: multiply;
+    }
+    
+    &:hover::after, &:focus::after {
+      width: 103%;
+    }
+  }
+
+  &--highlight-from-bottom {
+    position: relative;
+    display: inline-block; //Don't let the link line-break!
+    //This causes the :after elements position to glitch.
+    
+    &:after {
+      content: "";
+      position: absolute;
+      left: -1.5%;
+      bottom: -10%;
+      width: 103%;
+      height: 0%;
+      background-color: $color--primary;
+      transition: height 0.3s ease-in-out;
+      mix-blend-mode: multiply;
+    }
+    
+    &:hover::after, &:focus::after {
+      height: 120%;
+    }
+  }
+
+  &--highlight-from-top {
+    position: relative;
+    display: inline-block; //Don't let the link line-break!
+    //This causes the :after elements position to glitch.
+    
+    &:after {
+      content: "";
+      position: absolute;
+      left: -1.5%;
+      top: -10%;
+      width: 103%;
+      height: 0%;
+      background-color: $color--primary;
+      transition: height 0.3s ease-in-out;
+      mix-blend-mode: multiply;
+    }
+    
+    &:hover::after, &:focus::after {
+      height: 120%;
+    }
+  }
+}

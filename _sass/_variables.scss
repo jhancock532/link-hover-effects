@@ -14,15 +14,21 @@ $color--pink: rgb(255,118,154);
 $color--orange: rgb(254,161,21);
 $color--red: rgb(255,44,37);
 $color--green: rgb(63,165,53);
-$color--blue: rgb(0,35,227);
+$color--blue: rgb(0, 61, 227);
 $color--yellow: rgb(254,227,26);
 $color--white: rgb(255, 255, 255);
+$color--light-grey: rgb(229, 231, 232);
 $color--grey: rgb(150,160,161);
 $color--dark-grey: #272822;
 $color--black: rgb(0, 0, 0);
  
 $color--primary: $color--yellow;
 $color--secondary: $color--red;
+
+/* Card Variables */
+
+$card-border: 1px solid $color--grey;
+$card-border-radius: $grid / 2;
 
 /* Typography */
 
@@ -55,7 +61,7 @@ $mobile-font-sizes: (
   m: 18px,
   l: 20px,
   xl: 22px,
-  xxl: 28px,
+  xxl: 24px,
   xxxl: 32px
 );
 
@@ -73,7 +79,7 @@ $desktop-font-sizes: (
   m: 20px,
   l: 22px,
   xl: 24px,
-  xxl: 32px,
+  xxl: 28px,
   xxxl: 48px
 );
 
