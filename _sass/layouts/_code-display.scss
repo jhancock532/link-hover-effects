@@ -1,0 +1,37 @@
+.code-display {
+  &__container {
+    background-color: $color--dark-grey;
+    overflow-x: scroll;
+    @include font-size(s);
+    margin: $grid $grid * -1;
+
+    @include media-query(md){
+      margin: $grid * 2 0;
+    }
+
+    > figure > pre > code {
+      display: block;
+      width: 1px;
+    }
+  }
+
+  &__title {
+    margin-top: $grid;
+
+    @include media-query(sm){
+      margin-top: $grid * 2;
+    }
+  }
+
+  &__subtitle {
+    @include font-size(m);
+
+    @include media-query(sm){
+      margin-top: $grid;
+    }
+  }
+}
+
+.highlight {
+  margin: $grid 0 0 $grid;
+}

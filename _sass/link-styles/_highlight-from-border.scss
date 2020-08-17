@@ -1,9 +1,9 @@
 .link {
-  &--title {
+  &--highlight-from-bottom-border {
     padding: 2px 0 1px 0;
     text-decoration: none;
     background-image: linear-gradient(transparent 0%, transparent calc(50% - 6px), 
-                                      $color--primary calc(50% - 6px), $color--primary 100%);
+                      $color--primary calc(50% - 6px), $color--primary 100%);
     transition: background-position 120ms ease-in-out, padding 120ms ease-in-out;
     background-size: 100% 200%;
     background-position: 0 0%;
@@ -12,7 +12,7 @@
       color: $color--black;
     }
     
-    &:hover {
+    &:hover, &:active {
       background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), 
                                         $color--primary calc(50% - 9px), $color--primary 100%);
       background-position: 0 100%;

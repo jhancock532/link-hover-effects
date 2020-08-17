@@ -1,5 +1,5 @@
 .card {
-  &__topper {
+  &__header {
     margin: $grid * 2 0 0 0;
     padding: $grid $grid / 2 $grid / 2;
     background-color: $color--light-grey;
@@ -73,13 +73,6 @@
         margin-bottom: 0;
       }  
     }
-  }
-
-  &__code-container {
-    background-color: $color--dark-grey;
-    overflow: scroll scroll;
-    max-height: 350px;
-    @include font-size(s);
   }
 
   &__paragraph-container {

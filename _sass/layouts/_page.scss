@@ -5,11 +5,12 @@
     padding: $grid;
 
     @include media-query(sm) {
-      grid-template-columns: auto 600px auto;
+      grid-template-columns: auto 540px auto;
     }
 
     @include media-query(md) {
       grid-template-columns: auto 800px auto;
+      padding-bottom: $grid * 2;
     }
   }
 

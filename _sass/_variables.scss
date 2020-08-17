@@ -87,10 +87,6 @@ $desktop-font-sizes: (
 // See the following article if unfamilar - http://sangsoonam.github.io/2019/01/20/syntax-highlighting-in-jekyll.html
 // The theme is called Monokai, it's taken from http://jwarby.github.io/jekyll-pygments-themes/languages/java.html#
 
-.highlight {
-  margin: 0 0 0 $grid;
-}
-
 .highlight pre { background-color: #272822; }
 .highlight .hll { background-color: #272822; }
 .highlight .c { color: #75715e } /* Comment */
