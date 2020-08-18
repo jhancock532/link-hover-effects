@@ -1,3 +1,14 @@
 .button {
-  
+  @include font-size(m);
+  font-family: $font-primary;
+  background-color: $color--light-grey;
+  border: 1px solid $color--dark-grey;
+  border-radius: $grid / 2;
+  padding: $grid / 2;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover, &:active {
+    background-color: $color--grey;
+  }
 }
