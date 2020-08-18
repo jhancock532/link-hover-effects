@@ -1,0 +1,28 @@
+.homepage {
+  &__title {
+    margin: $grid auto 0 auto;
+    font-size: 3rem;
+
+    > a:visited {
+      color: $color--black;
+    }
+
+    @include media-query(sm){
+      margin-top: $grid * 3;
+      text-align: center;
+    }
+
+    @include media-query(md){
+      margin-top: $grid * 4;
+      font-size: 3.5rem;
+    }
+  }
+
+  &__description {
+    margin-top: $grid * 2;
+
+    @include media-query(md){
+      margin-top: $grid * 3;
+    }
+  }
+}

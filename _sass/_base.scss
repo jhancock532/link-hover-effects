@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background: $color--white;
+}
+
+p, li, h1, h2, h3, h4, h5 {
+  font-family: $font-primary;
+}
+
+::selection {
+  color: $color--black;
+  background: $color--yellow;
+}
+
+a {
+  color: $color--blue;
+
+  &:visited {
+    color: $color--blue;
+  }
+}

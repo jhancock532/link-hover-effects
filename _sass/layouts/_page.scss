@@ -1,0 +1,23 @@
+.page {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 0 auto 0;
+    padding: $grid;
+
+    @include media-query(sm) {
+      grid-template-columns: auto 580px auto;
+    }
+
+    @include media-query(md) {
+      grid-template-columns: auto 800px auto;
+      padding-bottom: $grid * 2;
+    }
+  }
+
+  &__content {
+    > p {
+      @include font-size(m);
+      line-height: 1.5em;
+    }
+  }
+}
