@@ -1,6 +1,6 @@
 ---
 layout: code-display
-title: Highlight Fill Mix-Blend-Mode
+title: Highlight with Mix-Blend-Mode
 ---
 
 {% highlight scss %}

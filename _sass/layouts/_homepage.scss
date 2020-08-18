@@ -3,6 +3,10 @@
     margin: $grid auto 0 auto;
     font-size: 3rem;
 
+    > a:visited {
+      color: $color--black;
+    }
+
     @include media-query(sm){
       margin-top: $grid * 3;
       text-align: center;

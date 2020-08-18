@@ -3,7 +3,7 @@
 $grid: 20px;
 
 $media-query-breakpoints: (
-  sm: 600px, //Mobile Landscape
+  sm: 640px, //Mobile Landscape
   md: 900px, //Tablet Landscape
   lg: 1200px //Desktop
 );
@@ -29,6 +29,12 @@ $color--secondary: $color--red;
 
 $card-border: 1px solid $color--grey;
 $card-border-radius: $grid / 2;
+
+/* Animation */
+
+$transition-speed--fast: 120ms;
+$transition-speed--medium: 240ms;
+$transition-speed--slow: 360ms;
 
 /* Typography */
 

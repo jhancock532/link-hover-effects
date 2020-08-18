@@ -5,7 +5,7 @@
     padding: $grid;
 
     @include media-query(sm) {
-      grid-template-columns: auto 540px auto;
+      grid-template-columns: auto 580px auto;
     }
 
     @include media-query(md) {
