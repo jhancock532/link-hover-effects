@@ -10,15 +10,15 @@ permalink: /about/
 
 Made with Jekyll and a lot of Sass. Hosted via GitHub Pages, contributions to the repository welcome.
 
+## Where did I get all this code from?
+
+A lot of these effects come from other developers across the internet. To give credit where it's due, you'll see a link to the source material I stole / adapted the code from in the view source code section.
+
+I've edited the code to meet my understanding of best practice and ensure it looks good across different formats. 
+
 ## Todo
-Click a button in the code container to see each code snippet in a larger modal.
-
-A button to toggle the font from serif to sans-serif?
-
-A button to see how the link looks in a longer paragraph or what happens when it goes over a line-break.
-
 Link to the about page.
 
 Tag filter feature.
 
-Link beside title of effect?
+Add attributations.

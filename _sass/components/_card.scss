@@ -84,11 +84,7 @@
       padding: $grid * 2;
     }
 
-    > p {
-      @include font-size(m);
-      line-height: 1.5em;
-      margin: 0;
-    }
+    @include paragraph-styling();
   }
 
   &__link-container {

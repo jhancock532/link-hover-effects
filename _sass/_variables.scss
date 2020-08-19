@@ -23,7 +23,7 @@ $color--dark-grey: #272822;
 $color--black: rgb(0, 0, 0);
  
 $color--primary: $color--yellow;
-$color--secondary: $color--red;
+$color--secondary: $color--blue;
 
 /* Card Variables */
 
@@ -59,6 +59,8 @@ $transition-speed--slow: 360ms;
 
 $font-primary: Nanum Gothic, Helvetica, Sans-serif;
 $font-secondary: Alegreya, serif;
+
+$paragraph-line-height: 1.5em;
 
 $font-weights: ("regular": 400, "bold": 700);
  

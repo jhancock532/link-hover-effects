@@ -9,8 +9,19 @@
       margin: $grid * 2 0;
     }
 
+    > p {
+      color: $color--white;
+      padding: 0 $grid;
+      @include paragraph-styling();
+
+      > a {
+        color: $color--primary;
+      }
+    }
+
     > figure > pre > code {
       display: block;
+      line-height: 1em;
       width: 1px;
     }
   }

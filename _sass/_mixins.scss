@@ -49,3 +49,13 @@
     }
   }
 }
+
+@mixin paragraph-styling {
+  @include font-size(m);
+  line-height: $paragraph-line-height;
+
+  > p {
+    @include font-size(m);
+    line-height: $paragraph-line-height;
+  }
+}
