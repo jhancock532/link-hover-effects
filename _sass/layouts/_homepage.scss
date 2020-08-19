@@ -2,9 +2,13 @@
   &__title {
     margin: $grid auto 0 auto;
     font-size: 3rem;
-
-    > a:visited {
+    
+    > a {
       color: $color--black;
+
+      &:visited {
+        color: $color--black;
+      }
     }
 
     @include media-query(sm){
