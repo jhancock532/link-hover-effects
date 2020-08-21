@@ -1,11 +1,17 @@
 .link {
   &--background-underline-from-right {
     padding-bottom: 2px;
-    background-image: linear-gradient(to right, transparent 0%, transparent 50%, $color--secondary 50%, $color--secondary 100%);
+    background-image: linear-gradient(
+      to right,
+      transparent 0%,
+      transparent 50%,
+      $color--secondary 50%,
+      $color--secondary 100%
+    );
     background-size: 200% 4px;
     background-repeat: no-repeat;
     background-position: left bottom;
-    transition: background-position 360ms ease-in-out;
+    transition: background-position 0.36s ease-in-out;
 
     &:hover {
       background-position: right bottom;
@@ -18,7 +24,7 @@
     background-size: 0% 4px;
     background-repeat: no-repeat;
     background-position: left bottom;
-    transition: background-size 360ms ease-in-out;
+    transition: background-size 0.36s ease-in-out;
 
     &:hover {
       background-size: 100% 4px;
@@ -31,7 +37,7 @@
     background-size: 100% 3px;
     background-repeat: no-repeat;
     background-position: left 58%;
-    transition: background-position 360ms ease-in-out;
+    transition: background-position 0.36s ease-in-out;
 
     &:hover {
       background-position: left bottom;

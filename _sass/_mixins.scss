@@ -1,4 +1,3 @@
-
 /** Mobile First Min-Width Media Query Mixin
  * Accepts the values xs, sm, md, lg (see variables.scss)
  * Use this mixin to overwrite mobile first CSS
@@ -6,14 +5,12 @@
  * Source - https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
  */
 
- @mixin media-query($breakpoint) {
-
+@mixin media-query($breakpoint) {
   @if map-has-key($media-query-breakpoints, $breakpoint) {
     $breakpoint-value: map-get($media-query-breakpoints, $breakpoint);
     @media (min-width: $breakpoint-value) {
       @content;
     }
-
   } @else {
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
@@ -26,14 +23,13 @@
  */
 
 @mixin font-size($font-size) {
-
   @if map-has-key($mobile-font-sizes, $font-size) {
     font-size: map-get($mobile-font-sizes, $font-size);
   } @else {
     @warn 'Stated font size not included in mobile-font-sizes: #{$font-size}.';
   }
 
-  @include media-query(md){
+  @include media-query(md) {
     @if map-has-key($tablet-font-sizes, $font-size) {
       font-size: map-get($tablet-font-sizes, $font-size);
     } @else {
@@ -41,7 +37,7 @@
     }
   }
 
-  @include media-query(lg){
+  @include media-query(lg) {
     @if map-has-key($desktop-font-sizes, $font-size) {
       font-size: map-get($desktop-font-sizes, $font-size);
     } @else {
@@ -50,6 +46,7 @@
   }
 }
 
+//A quick addition to style text paragraphs - mostly applied to paragraph containers
 @mixin paragraph-styling {
   @include font-size(m);
   line-height: $paragraph-line-height;

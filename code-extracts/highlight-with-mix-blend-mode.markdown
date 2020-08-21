@@ -18,7 +18,7 @@ title: Highlight with Mix-Blend-Mode
       width: 0;
       height: calc(100% + 8px);
       background-color: $color--primary;
-      transition: width 0.3s ease-in-out;
+      transition: width 0.36s ease-in-out;
       mix-blend-mode: multiply;
     }
     
@@ -39,7 +39,7 @@ title: Highlight with Mix-Blend-Mode
       width: 0;
       height: calc(100% + 8px);
       background-color: $color--primary;
-      transition: width 0.3s ease-in-out;
+      transition: width 0.36s ease-in-out;
       mix-blend-mode: multiply;
     }
     
@@ -60,7 +60,7 @@ title: Highlight with Mix-Blend-Mode
       width: calc(100% + 8px);
       height: 0%;
       background-color: $color--primary;
-      transition: height 0.3s ease-in-out;
+      transition: height 0.36s ease-in-out;
       mix-blend-mode: multiply;
     }
     
@@ -81,7 +81,7 @@ title: Highlight with Mix-Blend-Mode
       width: calc(100% + 8px);
       height: 0%;
       background-color: $color--primary;
-      transition: height 0.3s ease-in-out;
+      transition: height 0.36s ease-in-out;
       mix-blend-mode: multiply;
     }
     

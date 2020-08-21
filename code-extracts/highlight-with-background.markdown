@@ -8,7 +8,7 @@ title: Highlight with Background
   &--highlight-fade-in {
     padding: 1px 0;
     background-color: transparent; 
-    transition: background-color 240ms ease-in-out;
+    transition: background-color 360ms ease-in-out;
     
     &:hover, &:active {
       background-color: $color--primary;
@@ -22,7 +22,7 @@ title: Highlight with Background
                                       $color--primary calc(50% - 1px), $color--primary calc(50% + 5px), 
                                       transparent calc(50% + 5px), transparent 100%);
     background-color: transparent; 
-    transition: background-color 240ms ease-in-out;
+    transition: background-color 360ms ease-in-out;
 
     &:hover, &:active {
       background-color: $color--primary;
@@ -36,7 +36,7 @@ title: Highlight with Background
                                       $color--primary calc(50% - 6px), $color--primary 100%);
     background-size: 100% 200%;
     background-position: 0 0;
-    transition: background-position 120ms ease-in-out;
+    transition: background-position 360ms ease-in-out;
     
     &:hover, &:active {
       background-position: 0 100%;

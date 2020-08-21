@@ -5,7 +5,7 @@
     @include font-size(s);
     margin: $grid $grid * -1;
 
-    @include media-query(md){
+    @include media-query(md) {
       margin: $grid * 2 0;
     }
 
@@ -29,7 +29,7 @@
   &__title {
     margin-top: $grid;
 
-    @include media-query(sm){
+    @include media-query(sm) {
       margin-top: $grid * 2;
     }
   }
@@ -37,7 +37,7 @@
   &__subtitle {
     @include font-size(m);
 
-    @include media-query(sm){
+    @include media-query(sm) {
       margin-top: $grid;
     }
   }

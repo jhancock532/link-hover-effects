@@ -3,7 +3,7 @@
     position: relative;
     display: inline-block; //Preventing line break
     //This stops some issues with absolute positioning.
-    
+
     &:after {
       content: "";
       position: absolute;
@@ -15,8 +15,9 @@
       transition: width 0.3s ease-in-out;
       mix-blend-mode: multiply;
     }
-    
-    &:hover::after, &:focus::after {
+
+    &:hover::after,
+    &:focus::after {
       width: calc(100% + 8px);
     }
   }
@@ -24,7 +25,7 @@
   &--highlight-from-right {
     position: relative;
     display: inline-block;
-    
+
     &:after {
       content: "";
       position: absolute;
@@ -36,8 +37,9 @@
       transition: width 0.3s ease-in-out;
       mix-blend-mode: multiply;
     }
-    
-    &:hover::after, &:focus::after {
+
+    &:hover::after,
+    &:focus::after {
       width: calc(100% + 8px);
     }
   }
@@ -57,8 +59,9 @@
       transition: height 0.3s ease-in-out;
       mix-blend-mode: multiply;
     }
-    
-    &:hover::after, &:focus::after {
+
+    &:hover::after,
+    &:focus::after {
       height: calc(100% + 8px);
     }
   }
@@ -66,7 +69,7 @@
   &--highlight-from-top {
     position: relative;
     display: inline-block;
-    
+
     &:after {
       content: "";
       position: absolute;
@@ -78,8 +81,9 @@
       transition: height 0.3s ease-in-out;
       mix-blend-mode: multiply;
     }
-    
-    &:hover::after, &:focus::after {
+
+    &:hover::after,
+    &:focus::after {
       height: calc(100% + 8px);
     }
   }
