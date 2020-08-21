@@ -6,7 +6,7 @@ Made with Jekyll and hosted via GitHub Pages. I used Sass for styling the links.
 
 ## Credits
 
-Developed by James Hancock. [Twitter](https://twitter.com/jhancock532).
+Developed by [James Hancock](https://twitter.com/jhancock532).
 
 Any additions, feedback or code review would be very much appreciated. If you'd like to contribute to the project, please visit the repository.
 
