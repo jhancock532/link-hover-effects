@@ -1,0 +1,102 @@
+.link {
+    &--background-crossover {
+        text-decoration: none;
+        padding: 5px 0;
+        background-image: linear-gradient(
+                to right,
+                rgba($color--primary, 0.5) 0%,
+                rgba($color--primary, 0.5) 50%,
+                transparent 50%,
+                transparent 100%
+            ),
+            linear-gradient(
+                to left,
+                rgba($color--primary, 0.5) 0%,
+                rgba($color--primary, 0.5) 50%,
+                transparent 50%,
+                transparent 100%
+            ),
+            linear-gradient(
+                rgba($color--green, 0.5) 0%,
+                rgba($color--green, 0.5) 50%,
+                transparent 50%,
+                transparent 100%
+            ),
+            linear-gradient(
+                transparent 0%,
+                transparent 50%,
+                rgba($color--green, 0.5) 50%,
+                rgba($color--green, 0.5) 100%
+            ),
+            linear-gradient(rgba($color--red, 0.5), rgba($color--red, 0.5));
+
+        background-size: 200% 1ex, 200% 1ex, 1ex 200%, 1ex 200%, 100% 0.4ex;
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+        background-position: 100% calc(50% + 0.5ex), 0% calc(50% - 0.5ex), left 100%, right 0%, left calc(50% + 1.3ex);
+        background-blend-mode: hard-light;
+        transition: background-position 0.6s ease;
+
+        &:hover {
+            background-position: 0% calc(50% + 0.5ex), 100% calc(50% - 0.5ex), left 0%, right 100%,
+                left calc(100% + 1.3ex);
+        }
+    }
+
+    &--four-color-background {
+        background-image: linear-gradient(
+                to right,
+                rgba($color--gradient-5, 0.5) 0%,
+                rgba($color--gradient-5, 0.5) 50%,
+                transparent 50%,
+                transparent 100%
+            ),
+            linear-gradient(
+                to left,
+                rgba($color--gradient-4, 0.5) 0%,
+                rgba($color--gradient-4, 0.5) 50%,
+                transparent 50%,
+                transparent 100%
+            ),
+            linear-gradient(
+                rgba($color--gradient-6, 0.5) 0%,
+                rgba($color--gradient-6, 0.5) 50%,
+                transparent 50%,
+                transparent 100%
+            ),
+            linear-gradient(
+                transparent 0%,
+                transparent 50%,
+                rgba($color--gradient-3, 0.5) 50%,
+                rgba($color--gradient-3, 0.5) 100%
+            );
+
+        background-size: 200% 25%, 200% 25%, 100% 50%, 100% 50%;
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+        background-position: right 33%, left 66%, left -50%, right 150%;
+
+        transition: background-position 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+        // See https://easings.net/ for more transitions.
+
+        &:hover {
+            background-position: 0% 33.33%, 100% 66.66%, left 0%, right 100%;
+        }
+    }
+
+    &--multi-gradient-fill {
+        padding: 2px 0;
+        text-decoration: none;
+        background-image: linear-gradient(45deg, rgba($color--gradient-4, 0.5) 0%, transparent 50%, transparent 100%),
+            linear-gradient(45deg, transparent 0%, transparent 50%, rgba($color--gradient-6, 0.5) 100%),
+            linear-gradient(rgba($color--gradient-5, 0.7), rgba($color--gradient-5, 0.7));
+        background-size: 200% 200%, 200% 200%, 100% 0.4ex;
+        background-repeat: no-repeat;
+        background-position: 100% 0, 0% 100%, 0 calc(50% + 1ex);
+
+        transition: all 0.6s ease;
+
+        &:hover {
+            background-position: 0 100%, 100% 0, 0 50%;
+            background-size: 200% 200%, 200% 200%, 100% 66%;
+        }
+    }
+}
