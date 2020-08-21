@@ -8,9 +8,8 @@ Developed by [James Hancock](https://twitter.com/jhancock532).
 
 ## Code Attribution
 
-A lot of these effects are similar to what other developers have made, with one or two being direct derivations. Where relevant, I include attributions to the original source material. These can be viewed by clicking on the "View Source Code" link.
+A lot of these effects are similar to what other developers have made, with one or two being direct derivations. Where relevant, I include attributions to the original source material. These can be viewed by clicking on the "View Source Code" link when accessing the website.
 
 ## License
 
-Creative Commons License
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
