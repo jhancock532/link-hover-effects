@@ -1,0 +1,75 @@
+.cta-card {
+  margin: $grid * 2 auto $grid auto;
+  width: 100%;
+
+  @include media-query(sm){
+    width: max-content;
+  }
+
+  &__header {
+    border-top: $card-border;
+
+    border: $card-border;
+    border-bottom: none;
+    border-top-right-radius: $card-border-radius;
+    border-top-left-radius: $card-border-radius;
+
+    background-image: linear-gradient(35deg, $color--primary, lighten($color--primary, 40%));
+    margin: 0 auto;
+
+    @include media-query(sm){
+      margin-top: $grid * 3;
+    }
+  }
+
+  &__content {
+    border: $card-border;
+    border-bottom-left-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+
+    padding: 0 $grid / 2 $grid * 2 $grid / 2;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0;
+    padding: $grid;
+    font-size: 1.5rem;
+
+    @include media-query(sm){
+      width: max-content;
+      margin: 0 auto;
+      font-size: 2.2rem;
+      padding: $grid * 2;
+    }
+
+    > a { 
+      color: $color--black;
+    }
+  }
+
+  &__link {
+    text-align: center;
+    margin: $grid * 2 0 0 0;
+
+    @include font-size(xl);
+  }
+
+  &__credits {
+    text-align: center;
+    margin: $grid 0 0 0;
+
+    @include media-query(sm){
+      margin: $grid * 2 0 0 0;
+    }
+  }
+
+  &__social-links {
+    text-align: center;
+    margin-top: $grid / 2;
+
+    @include media-query(sm){
+      margin-top: $grid;
+    }
+  }
+}

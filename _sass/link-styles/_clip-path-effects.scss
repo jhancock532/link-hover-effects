@@ -16,20 +16,28 @@
 
       /* Base rectangle clip path to animate from. */
       clip-path: polygon(0% 0%, 60% 0%, 60% 0%, 100% 0%, 100% 100%, 60% 100%, 60% 100%, 0% 100%);
-      transition: 0.6s;
+      transition: clip-path 0.6s;
     }
 
     &:hover::before {
       /* Arrow clip path to transition into. */
       clip-path: polygon(10% 30%, 60% 30%, 60% 5%, 90% 50%, 90% 50%, 60% 95%, 60% 70%, 10% 70%);
     }
+
+    transition: color 0.6s;
+    &:hover {
+      color: $color--black;
+    }
   }
 
   &--jagged-clip-path {
     display: inline-block;
-    padding: 0;
-    margin: 0;
     background-color: $color--primary;
+
+    transition: color 0.6s;
+    &:hover {
+      color: $color--black;
+    }
 
     clip-path: polygon(
       0% 10%,
@@ -55,7 +63,7 @@
       10% 100%,
       0% 95%
     );
-    transition: 0.6s;
+    transition: clip-path 0.6s;
 
     &:hover {
       clip-path: polygon(
@@ -88,6 +96,11 @@
   &--fine-blinds-clip-path {
     display: inline-block;
     position: relative;
+
+    transition: color 0.6s;
+    &:hover {
+      color: $color--black;
+    }
 
     &::before {
       content: "";
@@ -154,7 +167,7 @@
         96% 4%,
         0% 4%
       );
-      transition: 0.6s;
+      transition: clip-path 0.6s;
     }
 
     &:hover::before {

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: $color--white;
@@ -15,13 +19,13 @@ h5 {
 
 ::selection {
   color: $color--black;
-  background: $color--yellow;
+  background: $color--primary;
 }
 
 a {
-  color: $color--blue;
+  color: $color--secondary;
 
   &:visited {
-    color: $color--blue;
+    color: $color--secondary;
   }
 }

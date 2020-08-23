@@ -17,7 +17,7 @@
   }
 
   &__title {
-    margin: 0;
+    margin: 0 $grid / 2 0 0;
     display: inline-block;
     @include font-size(xxl);
   }

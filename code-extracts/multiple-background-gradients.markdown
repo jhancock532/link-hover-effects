@@ -3,6 +3,8 @@ layout: code-display
 title: Multiple Background Gradients
 ---
 
+For further inspiration on how background gradients can combined, visit [a.singlediv.com](https://a.singlediv.com/) and look and some of [Lynn Fisher's](https://twitter.com/lynnandtonic) creations.
+
 {% highlight scss %}
 .link {
     &--background-crossover {
@@ -40,11 +42,12 @@ title: Multiple Background Gradients
         background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
         background-position: 100% calc(50% + 0.5ex), 0% calc(50% - 0.5ex), left 100%, right 0%, left calc(50% + 1.3ex);
         background-blend-mode: hard-light;
-        transition: background-position 0.6s ease;
+        transition: background-position 0.6s ease, color 0.6s;
 
         &:hover {
             background-position: 0% calc(50% + 0.5ex), 100% calc(50% - 0.5ex), left 0%, right 100%,
                 left calc(100% + 1.3ex);
+            color: $color--black;
         }
     }
 
@@ -80,11 +83,12 @@ title: Multiple Background Gradients
         background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
         background-position: right 33%, left 66%, left -50%, right 150%;
 
-        transition: background-position 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+        transition: background-position 0.6s cubic-bezier(0.83, 0, 0.17, 1), color 0.6s;
         // See https://easings.net/ for more transitions.
 
         &:hover {
             background-position: 0% 33.33%, 100% 66.66%, left 0%, right 100%;
+            color: $color--black;
         }
     }
 
@@ -98,11 +102,12 @@ title: Multiple Background Gradients
         background-repeat: no-repeat;
         background-position: 100% 0, 0% 100%, 0 calc(50% + 1ex);
 
-        transition: all 0.6s ease;
+        transition: background-position 0.6s, background-size 0.6s, color 0.6s;
 
         &:hover {
             background-position: 0 100%, 100% 0, 0 50%;
             background-size: 200% 200%, 200% 200%, 100% 66%;
+            color: $color--black;
         }
     }
 }{% endhighlight %}

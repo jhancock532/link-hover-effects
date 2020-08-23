@@ -22,9 +22,6 @@ $color--grey: rgb(150, 160, 161);
 $color--dark-grey: #272822;
 $color--black: rgb(0, 0, 0);
 
-$color--primary: $color--yellow;
-$color--secondary: $color--blue;
-
 // Color gradient taken from https://mycolor.space/?hex=%23845EC2&sub=1
 $color--gradient-1: #845ec2;
 $color--gradient-2: #d65db1;
@@ -32,6 +29,11 @@ $color--gradient-3: #ff6f91;
 $color--gradient-4: #ff9671;
 $color--gradient-5: #ffc75f;
 $color--gradient-6: #f9f871;
+
+$color--primary: $color--yellow;
+$color--secondary: $color--blue;
+
+
 
 /* Card Variables */
 

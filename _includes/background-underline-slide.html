@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" id="background-underline-section">
   <div class="card__header">
     <h1 class="card__title">Link Underline Effects</h1>
     <p class="card__link-to-code"><a href="{{ site.baseurl }}/code-extracts/background-underline-slide.html">View Source
@@ -7,15 +7,21 @@
 
   <div class="card__link-display-container">
     <div class="card__link-container">
-      <a class="card__link link--background-underline-from-right" href="#">Slide from right</a>
-      <a class="card__link link--background-underline-from-left" href="#">Slide from left</a>
-      <a class="card__link link--background-underline-from-strikethrough" href="#">Strikethrough slide</a>
+      <a class="card__link link--background-underline-from-right" href="#background-underline-section">Slide from
+        right</a>
+      <a class="card__link link--background-underline-from-left" href="#background-underline-section">Slide from
+        left</a>
+      <a class="card__link link--background-underline-from-strikethrough"
+        href="#background-underline-section">Strikethrough slide</a>
     </div>
     <div class="card__paragraph-container">
-      <p>Hover your mouse over the links. Here's a <a href="#" class="link--background-underline-from-right">paragraph</a> to test out the link effect
-        over multiple lines of text. <a href="#" class="link--background-underline-from-left">Here is an extended length
+      <p>Hover your mouse over the links. Here's a <a href="#background-underline-section"
+          class="link--background-underline-from-right">paragraph</a> to test out the link effect
+        over multiple lines of text. <a href="#background-underline-section"
+          class="link--background-underline-from-left">Here is an extended length
           version of the link which displays slightly awkwardly because of how long it is.</a> The effect displays well
-        for <a class="link--background-underline-from-strikethrough" href="#">longer</a> links.</p>
+        for <a class="link--background-underline-from-strikethrough" href="#background-underline-section">longer</a>
+        links.</p>
     </div>
   </div>
 </div>
