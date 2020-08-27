@@ -2,11 +2,16 @@
   &__title {
     font-size: $font-size--subheading;
     padding: 0 0 2px 0;
-    margin: $grid 0;
+    margin: $grid * 2 0 $grid 0;
     border-bottom: 2px solid $color--dark-blue;
 
     @include media-query(sm){
+      font-size: $font-size--heading-mobile;
       margin: $grid * 2 0 $grid * 1.5 0;
+    }
+
+    @include media-query(md){
+      margin: $grid * 3 0 $grid * 1.5 0;
     }
   }
 
@@ -16,14 +21,13 @@
     font-weight: 400;
 
     &:hover {
-      color: lighten($color--dark-blue, 15%);
       font-weight: bold;
     }
   }
 
   &__attribution-title {
     font-size: $font-size--paragraph;
-    margin-top: 0;
+    margin-top: $grid / 2;
     margin-bottom: $grid / 2;
   }
 
@@ -33,7 +37,12 @@
   }
 
   &__disclaimer {
-    margin-top: -10px;
+    
     margin-bottom: $grid;
+
+    @include media-query(sm){
+      margin-top: -10px;
+      margin-bottom: $grid * 1.5;
+    }
   }
 }

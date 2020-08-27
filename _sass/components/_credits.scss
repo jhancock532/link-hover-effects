@@ -1,0 +1,12 @@
+.credits {
+  margin-top: $grid;
+
+  @include media-query(sm){
+    margin-top: $grid * 1;
+  }
+
+  > p {
+    font-size: $font-size--paragraph-mobile;
+    margin: 10px 0;
+  }
+}
