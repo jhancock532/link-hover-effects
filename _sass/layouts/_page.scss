@@ -13,8 +13,4 @@
       padding-bottom: $grid * 2;
     }
   }
-
-  &__content {
-    @include paragraph-styling();
-  }
 }

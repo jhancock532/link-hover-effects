@@ -3,11 +3,10 @@
 @import "base";
 
 //Components
-@import "components/button";
-@import "components/card";
-@import "components/cta-card";
+@import "components/section";
 
 //Link Styles
+@import "link-styles/link";
 @import "link-styles/highlight-mix-blend-mode";
 @import "link-styles/highlight-background";
 @import "link-styles/background-underline-slide";
@@ -17,4 +16,3 @@
 //Pages
 @import "layouts/page";
 @import "layouts/homepage";
-@import "layouts/code-display";

@@ -1,13 +1,10 @@
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   background: $color--white;
 }
 
 p,
+a,
 li,
 h1,
 h2,
@@ -15,6 +12,15 @@ h3,
 h4,
 h5 {
   font-family: $font-primary;
+}
+
+p {
+  font-size: $font-size--paragraph-mobile;
+  line-height: 1.4em;
+
+  @include media-query(sm){
+    font-size: $font-size--paragraph;
+  }
 }
 
 ::selection {

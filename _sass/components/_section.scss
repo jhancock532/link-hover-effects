@@ -1,0 +1,39 @@
+.section {
+  &__title {
+    font-size: $font-size--subheading;
+    padding: 0 0 2px 0;
+    margin: $grid 0;
+    border-bottom: 2px solid $color--dark-blue;
+
+    @include media-query(sm){
+      margin: $grid * 2 0 $grid * 1.5 0;
+    }
+  }
+
+  &__title-link {
+    color: $color--dark-blue;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover {
+      color: lighten($color--dark-blue, 15%);
+      font-weight: bold;
+    }
+  }
+
+  &__attribution-title {
+    font-size: $font-size--paragraph;
+    margin-top: 0;
+    margin-bottom: $grid / 2;
+  }
+
+  &__attribution-text {
+    font-size: $font-size--paragraph-mobile;
+    margin-top: $grid / 2;
+  }
+
+  &__disclaimer {
+    margin-top: -10px;
+    margin-bottom: $grid;
+  }
+}

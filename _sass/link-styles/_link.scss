@@ -1,0 +1,16 @@
+.link {
+  color: $color--secondary;
+  font-size: $font-size--paragraph-mobile;
+
+  margin: 0 $grid $grid 0;
+  display: inline-block;
+
+  @include media-query(sm){
+    font-size: $font-size--paragraph;
+    margin: 0 $grid * 1.5 $grid * 1.5 0;
+  }
+
+  &:visited {
+    color: $color--secondary;
+  }
+}

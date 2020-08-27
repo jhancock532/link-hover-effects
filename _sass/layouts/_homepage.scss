@@ -1,33 +1,20 @@
 .homepage {
   &__title {
     margin: $grid auto 0 auto;
-    font-size: 3rem;
-    line-height: 1.4em;
-
-    > a {
-      color: $color--black;
-
-      &:visited {
-        color: $color--black;
-      }
-    }
+    font-size: $font-size--heading-mobile;
+    line-height: 1em;
 
     @include media-query(sm) {
+      font-size: $font-size--heading;
       margin-top: $grid * 3;
-      text-align: center;
     }
 
     @include media-query(md) {
       margin-top: $grid * 4;
-      font-size: 3.5rem;
     }
   }
 
   &__description {
-    margin-top: $grid * 2;
-
-    @include media-query(md) {
-      margin-top: $grid * 3;
-    }
+    margin: $grid 0 $grid * 2 0;
   }
 }

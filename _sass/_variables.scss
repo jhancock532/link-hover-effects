@@ -8,37 +8,20 @@ $media-query-breakpoints: (
   lg: 1200px,
 );
 
-/* Colour Scheme */
-// Copied from https://theyardtheatre.co.uk
-$color--pink: rgb(255, 118, 154);
-$color--orange: rgb(254, 161, 21);
-$color--red: rgb(255, 44, 37);
-$color--green: rgb(63, 165, 53);
-$color--blue: rgb(0, 61, 227);
-$color--yellow: rgb(254, 227, 26);
-$color--white: rgb(255, 255, 255);
-$color--light-grey: rgb(229, 231, 232);
-$color--grey: rgb(150, 160, 161);
-$color--dark-grey: #272822;
-$color--black: rgb(0, 0, 0);
+/* Color Scheme */
 
-// Color gradient taken from https://mycolor.space/?hex=%23845EC2&sub=1
-$color--gradient-1: #845ec2;
-$color--gradient-2: #d65db1;
-$color--gradient-3: #ff6f91;
-$color--gradient-4: #ff9671;
-$color--gradient-5: #ffc75f;
-$color--gradient-6: #f9f871;
+$color--black: rgb(0, 0, 0);
+$color--grey: rgb(150, 160, 161);
+$color--white: rgb(255, 255, 255);
+
+$color--dark-blue: rgb(7, 42, 200);
+$color--blue: rgb(30, 150, 252);
+$color--light-blue: rgb(162, 214, 249);
+$color--yellow: rgb(252, 243, 0);
+$color--dark-yellow: rgb(255, 189, 0);
 
 $color--primary: $color--yellow;
-$color--secondary: $color--blue;
-
-
-
-/* Card Variables */
-
-$card-border: 1px solid $color--grey;
-$card-border-radius: $grid / 2;
+$color--secondary: $color--dark-blue;
 
 /* Typography */
 
@@ -56,232 +39,8 @@ $card-border-radius: $grid / 2;
 
 $font-primary: Nanum Gothic, Helvetica, Sans-serif;
 
-$paragraph-line-height: 1.5em;
-
-$font-weights: (
-  "regular": 400,
-  "bold": 700,
-);
-
-$mobile-font-sizes: (
-  s: 16px,
-  m: 18px,
-  l: 20px,
-  xl: 22px,
-  xxl: 24px,
-  xxxl: 32px,
-);
-
-$tablet-font-sizes: (
-  s: 16px,
-  m: 20px,
-  l: 22px,
-  xl: 24px,
-  xxl: 28px,
-  xxxl: 48px,
-);
-
-$desktop-font-sizes: (
-  s: 18px,
-  m: 20px,
-  l: 22px,
-  xl: 24px,
-  xxl: 28px,
-  xxxl: 48px,
-);
-
-/* Code Highlighting */
-// See the following article if unfamilar - http://sangsoonam.github.io/2019/01/20/syntax-highlighting-in-jekyll.html
-// The theme is called Monokai, it's taken from http://jwarby.github.io/jekyll-pygments-themes/languages/java.html#
-
-.highlight pre {
-  background-color: #272822;
-}
-.highlight .hll {
-  background-color: #272822;
-}
-.highlight .c {
-  color: #75715e;
-} /* Comment */
-.highlight .err {
-  color: #960050;
-  background-color: #1e0010;
-} /* Error */
-.highlight .k {
-  color: #66d9ef;
-} /* Keyword */
-.highlight .l {
-  color: #ae81ff;
-} /* Literal */
-.highlight .n {
-  color: #f8f8f2;
-} /* Name */
-.highlight .o {
-  color: #f92672;
-} /* Operator */
-.highlight .p {
-  color: #f8f8f2;
-} /* Punctuation */
-.highlight .cm {
-  color: #75715e;
-} /* Comment.Multiline */
-.highlight .cp {
-  color: #75715e;
-} /* Comment.Preproc */
-.highlight .c1 {
-  color: #75715e;
-} /* Comment.Single */
-.highlight .cs {
-  color: #75715e;
-} /* Comment.Special */
-.highlight .ge {
-  font-style: italic;
-} /* Generic.Emph */
-.highlight .gs {
-  font-weight: bold;
-} /* Generic.Strong */
-.highlight .kc {
-  color: #66d9ef;
-} /* Keyword.Constant */
-.highlight .kd {
-  color: #66d9ef;
-} /* Keyword.Declaration */
-.highlight .kn {
-  color: #f92672;
-} /* Keyword.Namespace */
-.highlight .kp {
-  color: #66d9ef;
-} /* Keyword.Pseudo */
-.highlight .kr {
-  color: #66d9ef;
-} /* Keyword.Reserved */
-.highlight .kt {
-  color: #66d9ef;
-} /* Keyword.Type */
-.highlight .ld {
-  color: #e6db74;
-} /* Literal.Date */
-.highlight .m {
-  color: #ae81ff;
-} /* Literal.Number */
-.highlight .s {
-  color: #e6db74;
-} /* Literal.String */
-.highlight .na {
-  color: #a6e22e;
-} /* Name.Attribute */
-.highlight .nb {
-  color: #f8f8f2;
-} /* Name.Builtin */
-.highlight .nc {
-  color: #a6e22e;
-} /* Name.Class */
-.highlight .no {
-  color: #66d9ef;
-} /* Name.Constant */
-.highlight .nd {
-  color: #a6e22e;
-} /* Name.Decorator */
-.highlight .ni {
-  color: #f8f8f2;
-} /* Name.Entity */
-.highlight .ne {
-  color: #a6e22e;
-} /* Name.Exception */
-.highlight .nf {
-  color: #a6e22e;
-} /* Name.Function */
-.highlight .nl {
-  color: #f8f8f2;
-} /* Name.Label */
-.highlight .nn {
-  color: #f8f8f2;
-} /* Name.Namespace */
-.highlight .nx {
-  color: #a6e22e;
-} /* Name.Other */
-.highlight .py {
-  color: #f8f8f2;
-} /* Name.Property */
-.highlight .nt {
-  color: #f92672;
-} /* Name.Tag */
-.highlight .nv {
-  color: #f8f8f2;
-} /* Name.Variable */
-.highlight .ow {
-  color: #f92672;
-} /* Operator.Word */
-.highlight .w {
-  color: #f8f8f2;
-} /* Text.Whitespace */
-.highlight .mf {
-  color: #ae81ff;
-} /* Literal.Number.Float */
-.highlight .mh {
-  color: #ae81ff;
-} /* Literal.Number.Hex */
-.highlight .mi {
-  color: #ae81ff;
-} /* Literal.Number.Integer */
-.highlight .mo {
-  color: #ae81ff;
-} /* Literal.Number.Oct */
-.highlight .sb {
-  color: #e6db74;
-} /* Literal.String.Backtick */
-.highlight .sc {
-  color: #e6db74;
-} /* Literal.String.Char */
-.highlight .sd {
-  color: #e6db74;
-} /* Literal.String.Doc */
-.highlight .s2 {
-  color: #e6db74;
-} /* Literal.String.Double */
-.highlight .se {
-  color: #ae81ff;
-} /* Literal.String.Escape */
-.highlight .sh {
-  color: #e6db74;
-} /* Literal.String.Heredoc */
-.highlight .si {
-  color: #e6db74;
-} /* Literal.String.Interpol */
-.highlight .sx {
-  color: #e6db74;
-} /* Literal.String.Other */
-.highlight .sr {
-  color: #e6db74;
-} /* Literal.String.Regex */
-.highlight .s1 {
-  color: #e6db74;
-} /* Literal.String.Single */
-.highlight .ss {
-  color: #e6db74;
-} /* Literal.String.Symbol */
-.highlight .bp {
-  color: #f8f8f2;
-} /* Name.Builtin.Pseudo */
-.highlight .vc {
-  color: #f8f8f2;
-} /* Name.Variable.Class */
-.highlight .vg {
-  color: #f8f8f2;
-} /* Name.Variable.Global */
-.highlight .vi {
-  color: #f8f8f2;
-} /* Name.Variable.Instance */
-.highlight .il {
-  color: #ae81ff;
-} /* Literal.Number.Integer.Long */
-//.highlight .gh { } /* Generic Heading & Diff Header */
-.highlight .gu {
-  color: #75715e;
-} /* Generic.Subheading & Diff Unified/Comment? */
-.highlight .gd {
-  color: #f92672;
-} /* Generic.Deleted & Diff Deleted */
-.highlight .gi {
-  color: #a6e22e;
-} /* Generic.Inserted & Diff Inserted */
+$font-size--heading: 46px;
+$font-size--heading-mobile: 34px;
+$font-size--subheading: 28px;
+$font-size--paragraph: 20px;
+$font-size--paragraph-mobile: 18px;
