@@ -5,6 +5,10 @@
     margin-top: $grid * 1;
   }
 
+  @include media-query(md){
+    margin-top: $grid * 2;
+  }
+
   > p {
     font-size: $font-size--paragraph-mobile;
     margin: 10px 0;
