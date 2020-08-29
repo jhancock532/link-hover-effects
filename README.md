@@ -2,7 +2,7 @@
 
 A collection of link hover effects. [View the website here](https://jhancock532.github.io/link-hover-effects/).
 
-Made with Jekyll and hosted via GitHub Pages. I used Sass for styling the links. Any additions, feedback or code review would be very much appreciated.
+Made with Jekyll and hosted via GitHub Pages. I used Sass for styling the links. Any additions, feedback or code review would be very much appreciated, please raise an issue.
 
 ## License
 
