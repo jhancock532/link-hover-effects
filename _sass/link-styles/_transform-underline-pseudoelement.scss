@@ -1,0 +1,107 @@
+.link {
+  &--transform-underline-from-middle {
+    padding-bottom: 0.2ex;
+    display: inline-block;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: $underline-height;
+      background-color: $color--secondary;
+      transform: scaleX(0);
+      transition: transform 0.6s;
+    }
+    
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &--transform-underline-slide-over-left {
+    /* Shout out to Sam Larsen-Disney
+       This effect is derived from his website https://sld.codes/ */
+    padding-bottom: 0.2ex;
+    display: inline-block;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      transform-origin: center left;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: $underline-height;
+      background-color: $color--secondary;
+      transform: scaleX(0);
+      transition: transform 0.6s;
+    }
+    
+    &:hover::before {
+      transform-origin: center right;
+      transform: scaleX(1);
+    }
+  }
+
+  &--transform-underline-slide-over-right {
+    padding-bottom: 0.2ex;
+    display: inline-block;
+    position: relative;
+    
+    &::before {
+      content: '';
+      bottom: 0;
+      transform-origin: center right;
+      
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: $underline-height;
+      background-color: $color--secondary;
+      transform: scaleX(0);
+      transition: transform 0.6s;
+    }
+    
+    &:hover::before {
+      transform-origin: center left;
+      transform: scaleX(1);
+    }
+  }
+
+  &--transform-underline-pop-up {
+    /* Shout out to Eli Fitch
+       This effect is derived from his website http://eli.wtf/ */
+    padding: 0.2ex 0;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: color 0.6s;
+
+    &:hover {
+      color: $color--white;
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      height: $underline-height;
+      width: 100%;
+      background-color: $color--secondary;
+      transition: height 0.6s, width 0.6s, transform 0.6s;
+    }
+  
+    &:hover::before {
+      height: 100%;
+      width: calc(100% + 0.5em);
+      transform: translateX(-0.25em) skew(-7deg);
+    }
+  }
+}

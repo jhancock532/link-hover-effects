@@ -15,10 +15,10 @@
     padding: 1px 0;
     background-image: linear-gradient(
       transparent 0%,
-      transparent calc(50% - 1px),
-      $color--primary calc(50% - 1px),
-      $color--primary calc(50% + 5px),
-      transparent calc(50% + 5px),
+      transparent calc(50% - 0.1ex),
+      $color--primary calc(50% - 0.1ex),
+      $color--primary calc(50% + 0.5ex),
+      transparent calc(50% + 0.5ex),
       transparent 100%
     );
     background-color: transparent;
@@ -36,8 +36,8 @@
     text-decoration: none;
     background-image: linear-gradient(
       transparent 0%,
-      transparent calc(50% - 6px),
-      $color--primary calc(50% - 6px),
+      transparent calc(50% - 0.4ex),
+      $color--primary calc(50% - 0.4ex),
       $color--primary 100%
     );
     background-size: 100% 200%;

@@ -1,6 +1,6 @@
 .link {
   &--background-underline-from-right {
-    padding-bottom: 2px;
+    padding-bottom: 0.2ex;
     background-image: linear-gradient(
       to right,
       transparent 0%,
@@ -8,7 +8,7 @@
       $color--secondary 50%,
       $color--secondary 100%
     );
-    background-size: 200% 4px;
+    background-size: 200% $underline-height;
     background-repeat: no-repeat;
     background-position: left bottom;
     transition: background-position 0.36s ease-in-out;
@@ -19,22 +19,22 @@
   }
 
   &--background-underline-from-left {
-    padding-bottom: 2px;
+    padding-bottom: 0.2ex;
     background-image: linear-gradient($color--secondary, $color--secondary);
-    background-size: 0% 4px;
+    background-size: 0% $underline-height;
     background-repeat: no-repeat;
     background-position: left bottom;
     transition: background-size 0.36s ease-in-out;
 
     &:hover {
-      background-size: 100% 4px;
+      background-size: 100% $underline-height;
     }
   }
 
   &--background-underline-from-strikethrough {
-    padding-bottom: 1px;
+    padding-bottom: 0.2ex;
     background-image: linear-gradient($color--secondary, $color--secondary);
-    background-size: 100% 3px;
+    background-size: 100% $underline-height;
     background-repeat: no-repeat;
     background-position: left 58%;
     transition: background-position 0.36s ease-in-out;
