@@ -22,7 +22,7 @@
     }
 
     @include media-query(md) {
-      margin: $grid 0 $grid * 3 0;
+      margin: $grid 0 0 0;
     }
   }
 }

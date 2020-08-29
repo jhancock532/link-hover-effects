@@ -1,12 +1,9 @@
 .credits {
-  margin-top: $grid;
-
-  @include media-query(sm){
-    margin-top: $grid * 1;
-  }
+  margin-top: $grid * 3;
 
   @include media-query(md){
-    margin-top: $grid * 2;
+    margin-top: $grid * 4;
+    margin-bottom: $grid * 2;
   }
 
   > p {
