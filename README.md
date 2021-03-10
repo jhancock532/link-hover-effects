@@ -7,3 +7,7 @@ Made with Jekyll and hosted via GitHub Pages. I used Sass for styling the links.
 ## License
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+## Inspiration
+
+The duplication and split links of [bloodknife.com](https://bloodknife.com/everyone-beautiful-no-one-horny/)'s nav bar.
