@@ -1,0 +1,47 @@
+.link {
+
+  //Demo available on CodePen using plain CSS :)
+  //https://codepen.io/jhancock532/pen/gOxaVxw?editors=0100
+
+  &--popup-text {
+
+    position: relative;
+
+    &::before, &::after {
+      font-size: 0.9em;
+      background: $color--yellow;
+      color: black;
+      line-height: 1em;
+      padding: 0.2em 0.15em 0.2em;
+      border-radius: 0.2em;
+      position: absolute;
+      top: -1em;
+      left: 50%;
+      opacity: 0;
+      transition: 0.2s opacity cubic-bezier(0.33, 1, 0.68, 1), 0.2s transform cubic-bezier(0.33, 1, 0.68, 1);
+    }
+    
+    &::before {
+      content: "Click";
+      transform: translate(-65%, 20%) rotateZ(-1deg);     
+    }
+    
+    &::after {
+      content: "me!";
+      transform: translate(45%, 20%) rotateZ(1deg);
+    }
+
+    &:hover::before, &:hover::after {
+      transition: 0.4s opacity cubic-bezier(0.33, 1, 0.68, 1), 0.4s transform cubic-bezier(0.33, 1, 0.68, 1);
+      opacity: 1;
+    }
+    
+    &:hover::before {
+      transform: translatex(-75%) rotateZ(-3deg);
+    }
+    
+    &:hover::after {
+      transform: translatex(45%) rotateZ(3deg);
+    }
+  }
+}
