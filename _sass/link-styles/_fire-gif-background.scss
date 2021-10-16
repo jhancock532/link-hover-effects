@@ -1,0 +1,54 @@
+.link {
+
+  &--fire-gif-background {
+    background-position-y: calc(1em + 16px);
+    transition: background-position-y 0.6s ease-out, color 0.6s ease-out;
+    background-repeat: repeat-x;
+    background-image: url("../images/fire-gif-transparent.gif"), linear-gradient( rgba(0, 0, 0, 0.7), black);
+    background-size: contain;
+
+    padding: 4px;
+
+    &:hover {
+      background-position-y: 0;
+      color: white;
+    }
+  }
+
+  &--fire-gif-pseudoelement {
+
+    //The CSS for this effect, and the impact display: inline-block; has on a paragraph
+    //is shown in the following CodePen demo: https://codepen.io/jhancock532/pen/YzxwYeP
+
+    position: relative;
+    display: inline-block;
+    color: $color--secondary;
+    text-shadow: 0px 0px 4px white, 0px 0px 4px white, 0px 0px 4px white;
+    transition: color 0.6s ease;
+    
+    &:hover {
+      color: black;
+    }
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px; right: -2px; bottom: -2px; left: -2px;
+      z-index: -1;
+      background-repeat: repeat-x;
+      background-image: url("../images/fire-gif-transparent.gif");
+      background-size: auto 100%;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      opacity: 0;
+      transition: transform 0.6s ease, opacity 0.3s ease-out;
+    }
+    
+    &:hover::before {
+      transform: scaleY(1);
+      opacity: 1;
+      transition: transform 0.6s ease, opacity 0.3s ease;
+    }
+  }
+
+}
