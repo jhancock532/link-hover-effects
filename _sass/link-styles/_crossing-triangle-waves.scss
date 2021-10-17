@@ -1,0 +1,22 @@
+.link {
+
+  //CSS Demo at https://codepen.io/jhancock532/pen/xxLVKKv
+  
+  &--crossing-triangle-waves {
+    padding: 2px;
+    background-size: 20px auto, 20px auto;
+    background-repeat: repeat-x, repeat-x;
+    background-position: 0 2em, 0 4em;
+    background-image: 
+      conic-gradient(from 65deg at 0% 70%, $color--dark-blue 65deg 180deg, transparent 180deg),
+      conic-gradient(from -65deg at 100% 40%, transparent 180deg, $color--blue 180deg);
+    color: $color--secondary;
+    transition: background-position 1s ease-in, color 1s ease;
+  
+    &:hover {
+      background-position: -8em 0, 8em 0;
+      transition: background-position 1s ease-out, color 0.5s ease-out 0.5s;
+      color: white;
+    }
+  }
+}
