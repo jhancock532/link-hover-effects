@@ -25,6 +25,26 @@
     }
   }
 
+  &__links {
+    @include media-query(sm){
+      margin-top: $grid;
+    }
+
+    @include media-query(md){
+      margin-top: $grid * 2;
+    }
+  }
+
+  &__attribution {
+    @include media-query(sm){
+      margin-top: $grid;
+    }
+
+    @include media-query(md){
+      margin-top: $grid;
+    }
+  }
+
   &__attribution-title {
     font-size: $font-size--paragraph;
     margin-top: $grid / 2;
