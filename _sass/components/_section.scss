@@ -46,6 +46,8 @@
   }
 
   &__attribution-title {
+    font-family: $font-primary;
+    font-weight: bold;
     font-size: $font-size--paragraph;
     margin-top: $grid / 2;
     margin-bottom: $grid / 2;
