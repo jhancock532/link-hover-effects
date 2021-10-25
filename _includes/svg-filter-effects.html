@@ -1,0 +1,84 @@
+<!-- To use SVG filter effects, you'll need to include the SVG below with the appropriate filter.-->
+
+<svg height="0" width="0" style="position: absolute;"> 
+  <!--Don't hide this with display: none; or the filter won't show on Firefox! -->
+  
+  <filter id="turbulenceFilter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+    <feTurbulence type="turbulence" baseFrequency="0.01 0.03" numOctaves="2" seed="1337" stitchTiles="noStitch" result="turbulence"/>
+    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="10" xChannelSelector="G" yChannelSelector="A" result="displacementMap"/>
+  </filter>
+
+  <filter id="outlineFilter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+    <feMorphology operator="dilate" radius="2 2" in="SourceAlpha" result="morphology"/>
+    <feFlood flood-color="#072AC8" flood-opacity="1" result="flood"/> <!--Add your link colour here.-->
+    <feComposite in="flood" in2="morphology" operator="in" result="composite"/>
+    <feComposite in="composite" in2="SourceAlpha" operator="out" result="composite1"/>
+  </filter>
+
+  <filter id="dustFilter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+    <feTurbulence type="turbulence" baseFrequency="0.8 0.8" numOctaves="2" seed="4" stitchTiles="stitch" result="turbulence"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0
+  0 0 0 0 0
+  0 0 0 0 0
+  0 0 0 -35 10" in="turbulence" result="colormatrix"/>
+    <!-- Increase the -35 to get more dust, decrease to get less.-->
+    <feComposite in="colormatrix" in2="SourceAlpha" operator="in" result="composite"/>
+    <feTurbulence type="turbulence" baseFrequency="0.001 0.001" numOctaves="1" seed="2" stitchTiles="stitch" result="turbulence1"/>
+    <!-- Change the scale factor of the displacement map until it looks right. -->
+    <feDisplacementMap in="composite" in2="turbulence1" scale="3" xChannelSelector="R" yChannelSelector="B" result="displacementMap"/>
+    <!-- Set the link color below. -->
+    <feFlood flood-color="#072AC8" flood-opacity="1" x="0%" y="0%" width="100%" height="100%" result="flood"/>
+    <feComposite in="flood" in2="displacementMap" operator="in" x="0%" y="0%" width="100%" height="100%" result="composite1"/>
+  </filter>
+
+  <filter id="horizontalBlurFilter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+    <feGaussianBlur stdDeviation="20 0" x="-20%" y="0%" width="140%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"/>
+    <!--Increase the 20 stdDeviation value for more blur.-->
+    <!--Increase the x from -20% to 0% and decrease width to 100% to stop the link blurring over other text. -->
+  </filter>
+
+  <filter id="verticalBlurFilter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+    <feGaussianBlur stdDeviation="0 5" x="-10%" y="-50%" width="120%" height="200%" in="SourceGraphic" edgeMode="none" result="blur"/>
+  </filter>
+
+  <filter id="stripeFilter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+    <feTurbulence type="turbulence" baseFrequency="0.03 0" numOctaves="10" seed="3" stitchTiles="stitch" result="turbulence"/>
+    <feColorMatrix type="saturate" values="20" in="morphology1" result="colormatrix"/>
+    <feFlood flood-color="#ffeb00" flood-opacity="1" result="flood"/>
+    <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite"/>
+    <feComposite in="colormatrix" in2="SourceGraphic" operator="in" result="composite1"/>
+    <feMerge result="merge">
+      <feMergeNode in="composite" result="mergeNode"/>
+      <feMergeNode in="composite1" result="mergeNode1"/>
+      <feMergeNode in="composite1" result="mergeNode2"/>
+      <feMergeNode in="composite1" result="mergeNode3"/>
+      <feMergeNode in="composite1" result="mergeNode4"/>
+      <feMergeNode in="composite1" result="mergeNode5"/>
+      <feMergeNode in="composite1" result="mergeNode6"/>
+    </feMerge>
+  </filter>
+</svg>
+
+<div class="section" id="svg-filter-effects">
+  <h1 class="section__title"><a class="section__title-link" href="#svg-filter-effects">#</a> SVG Filter Effects</h1>
+  <p class="section__disclaimer">Make sure to add the SVG filter HTML, as found <a href="https://github.com/jhancock532/link-hover-effects/blob/master/_includes/svg-filter-effects.html">in this webpage</a>.</p>
+
+  <div class="section__links">
+    <a class="link link--svg-filter-turbulence" href="https://github.com/jhancock532/link-hover-effects/blob/master/_sass/link-styles/_svg-filter.scss">Turbulence Distortion Effect</a>
+    <a class="link link--svg-filter-outline" href="https://github.com/jhancock532/link-hover-effects/blob/master/_sass/link-styles/_svg-filter.scss">Link Outline Effect</a>
+    <a class="link link--svg-filter-dust" href="https://github.com/jhancock532/link-hover-effects/blob/master/_sass/link-styles/_svg-filter.scss">Dust Effect</a>
+    <a class="link link--svg-filter-horizontal-blur" href="https://github.com/jhancock532/link-hover-effects/blob/master/_sass/link-styles/_svg-filter.scss">Horizontal Blur Effect</a>
+    <a class="link link--svg-filter-vertical-blur" href="https://github.com/jhancock532/link-hover-effects/blob/master/_sass/link-styles/_svg-filter.scss">Vertical Blur Effect</a>
+    <a class="link link--svg-filter-colourful-stripe" href="https://github.com/jhancock532/link-hover-effects/blob/master/_sass/link-styles/_svg-filter.scss">Colourful Stripe Effect</a>
+  </div>
+
+  <details class="section__attribution">
+    <summary class="section__attribution-title">Code Attribution</summary>
+    <p class="section__attribution-text">These effects have been taken from <a href="https://twitter.com/yoksel_en">Yoskel's</a> SVG Filters presets and modifiers <a href="https://yoksel.github.io/svg-filters/">website tool</a>, I've modified code so they display better at a small scale.</p>
+  </details>
+  
+</div>
+
+
+
+

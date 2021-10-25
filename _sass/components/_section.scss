@@ -36,12 +36,16 @@
   }
 
   &__attribution {
+    margin-bottom: $grid * 3;
+
     @include media-query(sm){
       margin-top: $grid;
+      margin-bottom: $grid * 4;
     }
 
     @include media-query(md){
       margin-top: $grid;
+      margin-bottom: $grid * 5;
     }
   }
 

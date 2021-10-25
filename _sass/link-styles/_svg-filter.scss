@@ -1,0 +1,27 @@
+.link--svg-filter {
+
+  &-turbulence:hover {
+    filter: url("#turbulenceFilter");
+  }
+
+  &-outline:hover {
+    filter: url("#outlineFilter");
+  }
+
+  &-dust:hover {
+    filter: url("#dustFilter");
+  }
+
+  &-horizontal-blur:hover {
+    filter: url("#horizontalBlurFilter");
+  }
+
+  &-vertical-blur:hover {
+    filter: url("#verticalBlurFilter");
+  }
+
+  &-colourful-stripe:hover {
+    filter: url("#stripeFilter");
+  }
+
+}
